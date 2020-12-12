@@ -6,15 +6,17 @@ public class NoNullArrayList<T> extends ArrayList<T> {
   public NoNullArrayList(int startingCapacity){
     super(startingCapacity);
   }
-  public boolean add(T value) throws IllegalArgumentException{
-    if (value==null) throw new IllegalArgumentException();
+  public boolean add(T value){
+    if (value==null) {
+      throw new IllegalArgumentException("null value is not accepted");
+    }
     return super.add(value);
   }
-  public void add (int index, T value) throws IllegalArgumentException{
+  public void add (int index, T value) {
     if (value==null) throw new IllegalArgumentException();
     super.add(index, value);
   }
-  public T set(int index, T value) throws IllegalArgumentException{
+  public T set(int index, T value) {
     if (value==null) throw new IllegalArgumentException();
     return super.set(index, value);
   }
