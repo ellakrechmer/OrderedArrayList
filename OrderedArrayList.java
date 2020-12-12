@@ -32,10 +32,10 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     super.add(value);
     sort();
   }
-  // public T set (int index, T value){
-  //   T oldval=get(index);
-  //   remove(oldval);
-  //   add(value);
-  //   return oldval;
-  // }
+  public T set (int index, T value){
+    T oldval=super.remove(index);
+    super.add(value);
+    sort();
+    return oldval;
+  }
 }

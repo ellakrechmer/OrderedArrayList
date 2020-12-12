@@ -6,12 +6,12 @@ public class Tester{
     // s.add("apple"); s.add(0, "cat");
     // s.add(3, "banana"); s.add("null");
     // System.out.println(s);
-    ArrayList<String> t=new NoNullArrayList<String>();
-    t.add("apple"); t.add(0, "cat");
-    t.add("null"); t.add(3, "banana");
-    System.out.println(t);
-    // ArrayList<Integer> n=new OrderedArrayList<Integer>();
-    // n.add(5); n.add(7); n.add(3); n.add(6); n.add(4); n.add(1); n.add(2);
-    // System.out.println(n);
+    // ArrayList<String> t=new NoNullArrayList<String>();
+    // //t.add("apple"); t.add(0, "cat");
+    // t.add("null"); t.add("banana");
+    // System.out.println(t);
+    ArrayList<Integer> n=new OrderedArrayList<Integer>();
+    n.add(5); n.add(7); n.add(3); n.add(6); n.add(4); n.add(1); n.add(2); n.set(3, 9);
+    System.out.println(n);
   }
 }
