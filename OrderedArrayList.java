@@ -21,12 +21,14 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   }
 
   public boolean add(T value){
+    if (value==null) throw new IllegalArgumentException();
     super.add(value);
     sort();
     return true;
   }
 
   public void add (int index, T value){
+    if (value==null) throw new IllegalArgumentException();
     super.add(value);
     sort();
   }
