@@ -15,8 +15,8 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
         }
       }
       T curr=get(i);
-      set(i, get(minindex));
-      set(minindex, curr);
+      super.set(i, get(minindex));
+      super.set(minindex, curr);
     }
   }
 
@@ -36,13 +36,15 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     super.add(value);
     sort();
   }
-  // public T set (int index, T value) throws IllegalArgumentException{
-  //   if (value==null){
-  //     throw new IllegalArgumentException("Null was added");
-  //   }
-  //   T oldval=super.get(index);
-  //   super.remove(index);
-  //   add(value);
-  //   return oldval;
-  // }
+  public T set(int n, T v) throws IllegalArgumentException {
+		if (v == null) throw new IllegalArgumentException();
+
+		T hold = super.remove(n);
+
+		super.add(n, v);
+
+		sort();
+
+		return hold;
+	}
 }

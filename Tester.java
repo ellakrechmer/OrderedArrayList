@@ -4,7 +4,7 @@ public class Tester{
     ArrayList<String> s= new OrderedArrayList<String>();
     s.add("uni"); s.add("kani"); s.add(1, "ebi"); s.add(4, "ani");
     s.add("apple"); s.add(0, "cat");
-    s.add(3, "banana"); s.add("dog"); //s.add(null);
+    s.add(3, "banana"); s.set(0,"dog"); //s.add(null);
     System.out.println(s);
     // ArrayList<String> t=new NoNullArrayList<String>();
     // t.add("apple"); t.add(0, "cat");
