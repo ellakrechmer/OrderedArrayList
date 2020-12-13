@@ -36,14 +36,13 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     super.add(value);
     sort();
   }
-  public T set (int index, T value) throws IllegalArgumentException{
-    if (value==null){
-      throw new IllegalArgumentException("Null was added");
-    }
-    T oldval=super.get(index);
-    super.remove(index);
-    super.add(value);
-    sort();
-    return oldval;
-  }
+  // public T set (int index, T value) throws IllegalArgumentException{
+  //   if (value==null){
+  //     throw new IllegalArgumentException("Null was added");
+  //   }
+  //   T oldval=super.get(index);
+  //   super.remove(index);
+  //   add(value);
+  //   return oldval;
+  // }
 }
